@@ -1,0 +1,22 @@
+const TypeSelector = ({ qtype, setQtype }) => {
+  return (
+    <>
+      <div
+        className="col-md-6 offset-md-3 col-12"
+        value={qtype}
+        onChange={(event) => {
+          let type = parseInt(event.target.value);
+          setQtype(type);
+        }}
+      >
+        <select className="custom-select">
+          <option value="0">Choose Queston Type</option>
+          <option value="1">Multi-Select</option>
+          <option value="2">Single-Select</option>
+        </select>
+      </div>
+    </>
+  );
+};
+
+export default TypeSelector;
